@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/signup.css" />
   </head>
   <body>
-    <%- include('../partials/headers', {isLoggedIn : false} ) %>
+    <%- include('./partials/headers', {isLoggedIn : false} ) %>
     <main class="signup-container">
       <form class="signup-form" method="POST" action="/auth/signup">
         <% if (error) { %>
