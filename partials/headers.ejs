@@ -1,0 +1,19 @@
+<header>
+  <div>
+    <img src="/img/img6.png" alt="logo" class="logo" />
+  </div>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/products">Product</a>
+    <a href="/about">About Us</a>
+
+    <% if (isLoggedIn) { %>
+    <a href="/user/dashboard" class="dashboard-btn">dashboard</a>
+    <a href="/logout" class="logout-btn">Log Out</a>
+    <% } else { %>
+    <a href="/auth/login" class="login-btn">Sign In</a>
+    <a href="/auth/signup" class="register-btn">Register</a>
+    <% } %>
+  </nav>
+</header>

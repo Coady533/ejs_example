@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/public.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <%- include('../partials/headers', {isLoggedIn} ) %>
+    <main>
+      <h1>Welcome to EJS</h1>
+      <ul>
+        <li>username:<%= username %></li>
+        <li>email:<%= email %></li>
+        <li>location:<%= location %></li>
+        <li>income:<%= income %></li>
+      </ul>
+      <p>
+        <% if (income > 12000) { %> you are a high earner <% } else { %> hustle
+        harder <% } %>
+      </p>
+
+      <!--Using loops in ejs for array of single value-->
+      <section>
+        <% users.forEach(usr => { %>
+        <li><%= usr %></li>
+        <% }) %>
+      </section>
+
+      <!--for multiple values-->
+      <section class="post-container">
+        <% posts.forEach(post => { %>
+        <div class="post-card">
+          <h3><%= post.title %></h3>
+          <p class="excerpt"><%= post.excerpt %></p>
+          <p class="start">
+            <span class="author"><%= post.author %></span>
+            <span class="category"><%= post.category %></span>
+          </p>
+        </div>
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>
