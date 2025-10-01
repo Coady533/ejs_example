@@ -60,15 +60,14 @@ app.get("/about", checkAuth, (req, res) => {
 
 //use routers on app instance
 app.use("/auth", authrouter);
+//
+app.get("/healthcheck", (req, res) => {
+  res.status(200).json({ message: "Server is running successfully" });
+});
 
 //implement logout for get and post that delete the cookie from the user and redirect them to the login page
 
 app.get("/logout", (req, res) => {
-  res.clearCookie("token");
-  res.redirect("/auth/login");
-});
-
-app.post("/logout", (req, res) => {
   res.clearCookie("token");
   res.redirect("/auth/login");
 });
