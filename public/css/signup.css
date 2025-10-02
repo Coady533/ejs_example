@@ -25,7 +25,7 @@ input,
 select {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 7px;
   font-size: 1rem;
   transition: border-color 0.2s;
 }
@@ -39,7 +39,7 @@ button[type="submit"] {
   background: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 7px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
